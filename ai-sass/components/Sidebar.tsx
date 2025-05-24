@@ -137,47 +137,7 @@ const Sidebar = () => {
         </div>
       </div>
 
-      {/* Conversation History Section */}
-      <div className="px-3 py-2 border-t border-gray-700">
-        <div className="flex items-center justify-between mb-4">
-          <h2 className="text-sm font-semibold">Conversation History</h2>
-          <Button 
-            onClick={createNewConversation}
-            size="icon"
-            variant="ghost"
-            className="h-8 w-8"
-            disabled={isLoading}
-          >
-            <Plus className="h-4 w-4" />
-          </Button>
-        </div>
-        <div className="space-y-1 max-h-[300px] overflow-y-auto">
-          {conversations.length === 0 ? (
-            <p className="text-xs text-zinc-400 px-3">No conversations yet</p>
-          ) : (
-            conversations.map((conversation) => (
-              <div
-                key={conversation.id}
-                onClick={() => router.push(`/conversation?id=${conversation.id}`)}
-                className={cn(
-                  "group flex items-center justify-between p-2 rounded-lg cursor-pointer hover:bg-white/10 transition",
-                  pathname.includes(conversation.id) ? "bg-white/10" : ""
-                )}
-              >
-                <div className="flex-1 truncate text-sm">
-                  {conversation.title}
-                </div>
-                <button
-                  onClick={(e) => deleteConversation(conversation.id, e)}
-                  className="opacity-0 group-hover:opacity-100 text-zinc-400 hover:text-red-500 transition"
-                >
-                  <Trash2 className="h-4 w-4" />
-                </button>
-              </div>
-            ))
-          )}
-        </div>
-      </div>
+      
     </div>
   );
 };

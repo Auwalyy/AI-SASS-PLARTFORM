@@ -15,20 +15,7 @@ const tools = [
     bgColor: "bg-violet-500/10",
     href: "/dashboard/conversation",
   },
-  {
-    label: "Video Generation",
-    icon: VideoIcon,
-    href: "/dashboard/video",
-    color: "text-orange-700",
-    bgColor: "bg-orange-700/10",
-  },
-  {
-    label: "Music Generation",
-    icon: Music,
-    href: "/dashboard/music",
-    color: "text-emerald-500",
-    bgColor: "bg-emerald-500/10",
-  },
+ 
   {
     label: "Code Generation",
     icon: Code,
