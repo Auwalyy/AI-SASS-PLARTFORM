@@ -43,7 +43,7 @@ const routes = [
   {
     label: "Conversation",
     icon: MessageSquare,
-    href: "/conversation",
+    href: "/dashboard/conversation",
     color: "text-violet-500",
   },
 
@@ -51,7 +51,7 @@ const routes = [
   {
     label: "Code Generation",
     icon: Code,
-    href: "/code",
+    href: "/dashboard/code",
     color: "text-green-500",
   },
   {
