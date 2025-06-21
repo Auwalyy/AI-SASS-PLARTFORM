@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <main>
       <h1>Welcome to AI_SASS</h1>
-      <Link href="/sign-up">Dashboard</Link>
+      <h2>Dashboard</h2>
     </main>
   );
 }

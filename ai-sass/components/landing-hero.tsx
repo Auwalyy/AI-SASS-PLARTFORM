@@ -1,13 +1,10 @@
 "use client";
 
-import { useAuth } from "@clerk/nextjs";
 import Link from "next/link";
 import TypewriterComponent from "typewriter-effect";
 import { Button } from "./ui/button";
 
 const LandingHero = () => {
-  const { isSignedIn } = useAuth();
-
   return (
     <div className="text-white font-bold py-36 text-center space-y-5">
       <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold">
@@ -17,9 +14,6 @@ const LandingHero = () => {
             options={{
               strings: [
                 "Code Generation",
-                "Image Generation",
-                "Video Generation",
-                "Music Generation",
                 "Text Generation",
               ],
               autoStart: true,
@@ -34,7 +28,7 @@ const LandingHero = () => {
       </div>
 
       <div>
-        <Link href={isSignedIn ? "/dashboard" : "/sign-up"}>
+        <Link href="/dashboard"> {/* Always goes to dashboard */}
           <Button variant="default" className="md:text-lg p-4 md:p-6 rounded-full font-semibold">
             Start Generating for Free
           </Button>
